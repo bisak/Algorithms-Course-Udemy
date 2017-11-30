@@ -17,6 +17,25 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+// Short and simple solution
+function steps(n) {
+  for (let i = 1; i <= n; i++) {
+    console.log(`${'#'.repeat(i)}${' '.repeat(n - i)}`);
+  }
+}
+
+// Language-independent iterative
+/* function steps(n) {
+  for (let i = 1; i <= n; i++) {
+    let str = ''
+    for (let j = 0; j < i; j++) {
+      str += '#'
+    }
+    for (let c = 0; c < n - i; c++) {
+      str += ' '
+    }
+    console.log(str);
+  }
+} */
 
 module.exports = steps;
