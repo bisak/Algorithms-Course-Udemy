@@ -1,5 +1,5 @@
 // --- Directions
-// Given an array and chunk size, divide the array into many subarrays
+// Given an array and chunk size, divide the array into many sub arrays
 // where each subarray is of length size
 // --- Examples
 // chunk([1, 2, 3, 4], 2) --> [[ 1, 2], [3, 4]]
