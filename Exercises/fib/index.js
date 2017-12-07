@@ -53,7 +53,8 @@ function fib(n) {
   if (n < 2) {
     return n
   }
-  return fib(n - 1) + fib(n - 2)
+  let result = fib(n - 1) + fib(n - 2)
+  return result
 }
 
 fib = memoize(fib)
