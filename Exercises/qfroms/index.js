@@ -25,11 +25,10 @@ class Queue {
   }
 
   remove() {
-    let removedElement
     while (this.s1.peek()) {
       this.s2.push(this.s1.pop())
     }
-    removedElement = this.s2.pop()
+    let removedElement = this.s2.pop()
     while (this.s2.peek()) {
       this.s1.push(this.s2.pop())
     }
@@ -37,11 +36,10 @@ class Queue {
   }
 
   peek() {
-    let valToReturn
     while (this.s1.peek()) {
       this.s2.push(this.s1.pop())
     }
-    valToReturn = this.s2.peek()
+    let valToReturn = this.s2.peek()
     while (this.s2.peek()) {
       this.s1.push(this.s2.pop())
     }
