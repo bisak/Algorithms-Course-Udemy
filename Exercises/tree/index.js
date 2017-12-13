@@ -40,19 +40,13 @@ class Tree {
   }
 
   traverseDF(cb) {
-
+    let arr = [this.root]
+    while (arr.length) {
+      let node = arr.shift()
+      arr.unshift(...node.children)
+      cb(node)
+    }
   }
 }
 
-const letters = [];
-const t = new Tree();
-t.root = new Node('a');
-t.root.add('b');
-t.root.add('c');
-t.root.children[0].add('d');
-
-t.traverseBF(node => {
-  letters.push(node.data);
-});
-console.log(t)
 module.exports = { Tree, Node };
